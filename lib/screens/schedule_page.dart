@@ -17,6 +17,7 @@ class SchedulePage extends StatefulWidget {
 
 class _SchedulePageState extends State<SchedulePage>
     with SingleTickerProviderStateMixin {
+
   bool _isDark;
   AppTheme appTheme;
   TabController _tabController;
