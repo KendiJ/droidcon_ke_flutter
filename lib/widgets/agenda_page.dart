@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:droidcon_ke_flutter/models/index.dart';
 import 'package:droidcon_ke_flutter/utils/hex_color.dart';
@@ -46,9 +45,7 @@ class _AgendaPageState extends State<AgendaPage> {
                   Container(
                     color: HexColor(agenda[index].background_color),
                     child: ListTile(
-                      leading: CachedNetworkImage(
-                        imageUrl: agenda[index].iconUrl,
-                      ),
+                      leading: Image.network(agenda[index].iconUrl),
                       title: Text("${agenda[index].title}"),
                       subtitle: Text("${agenda[index].time}"),
                     ),
