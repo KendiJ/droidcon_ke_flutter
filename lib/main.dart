@@ -44,7 +44,6 @@ class MaterialAppWidget extends StatelessWidget {
         brightness: Provider.of<AppTheme>(context).getBrightness(),
       ),
       home: (user == null) ? WelcomePage() : SchedulePage(),
-      initialRoute: "/",
     );
   }
 }
