@@ -46,10 +46,10 @@ class MaterialAppWidget extends StatelessWidget {
         primaryColorDark: Colors.black,
         brightness: Provider.of<AppTheme>(context).getBrightness(),
       ),
-      home: (user == null) ? WelcomePage() : InfoPage(),
+      home: (user == null) ? WelcomePage() : SchedulePage(),
       initialRoute: "/",
       routes: {
-        '/schedule': (context) => SchedulePage(),
+        '/info': (context) => InfoPage(),
         '/venue': (context) => VenuePage(),
         '/speakers': (context) => SpeakersPage(),
       },

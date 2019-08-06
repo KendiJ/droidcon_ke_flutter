@@ -41,7 +41,7 @@ class _InfoPageState extends State<InfoPage> {
     return Scaffold(
       drawer: AppDrawer(),
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text("Info"),
         backgroundColor:
             _isDark ? Colors.transparent : Theme.of(context).primaryColor,
         actions: <Widget>[
@@ -90,7 +90,7 @@ class _InfoPageState extends State<InfoPage> {
               crossAxisCount: 3,
               children: [
                 InkWell(
-                  onTap: () => Navigator.of(context).pushReplacementNamed("/schedule"),
+                  onTap: () => Navigator.of(context).pushReplacementNamed("/"),
                   child: Card(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -99,22 +99,6 @@ class _InfoPageState extends State<InfoPage> {
                         Icon(Icons.access_time),
                         Text(
                           "Schedule",
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () =>
-                      Navigator.of(context).pushReplacementNamed("/speakers"),
-                  child: Card(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Icon(Icons.people),
-                        Text(
-                          "Speakers",
                         ),
                       ],
                     ),
@@ -136,7 +120,22 @@ class _InfoPageState extends State<InfoPage> {
                     ),
                   ),
                 ),
-
+                InkWell(
+                  onTap: () =>
+                      Navigator.of(context).pushReplacementNamed("/speakers"),
+                  child: Card(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Icon(Icons.people),
+                        Text(
+                          "Speakers",
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
