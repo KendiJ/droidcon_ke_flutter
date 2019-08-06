@@ -22,17 +22,20 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.calendar_today),
             title: Text("Schedule"),
-            onTap: () => Navigator.of(context).pushReplacementNamed("/"),
+            onTap: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => SchedulePage())),
           ),
           ListTile(
             leading: Icon(Icons.info_outline),
             title: Text("Info"),
-            onTap: () => Navigator.of(context).pushReplacementNamed("/info"),
+            onTap: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => InfoPage())),
           ),
           ListTile(
             leading: Icon(Icons.location_on),
             title: Text("Venue"),
-            onTap: () => Navigator.of(context).pushReplacementNamed("/venue"),
+            onTap: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => VenuePage())),
           ),
         ],
       ),
